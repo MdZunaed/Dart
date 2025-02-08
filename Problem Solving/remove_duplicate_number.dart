@@ -3,16 +3,16 @@
 void main() {
   List<int> numberList = [0, 1, 2, 2, 5, 6, 7, 8, 8, 8, 8, 8, 9];
 
-  // By using Set
+  // By using Set (Shortcut)
   numberList = removeDuplicate(numberList);
 
-  // With While loop
+  // With While loop (when need index)
   // removeDuplicateWhile(numberList);
 
-  // With for-in loop
+  // With for-in loop (no recommended due to new list)
   // numberList = removeDuplicateForIn(numberList);
 
-  // With for-each loop
+  // With for-each loop (no recommended due to new list)
   // numberList = removeDuplicateForEach(numberList);
 
   print(numberList);
@@ -49,12 +49,10 @@ List<int> removeDuplicateForIn(List<int> numberList) {
 // With for-each
 List<int> removeDuplicateForEach(List<int> numbers) {
   List<int> newList = [];
-
   numbers.forEach((number) {
     if (!newList.contains(number)) {
       newList.add(number);
     }
   });
-
   return newList;
 }
